@@ -1,0 +1,12 @@
+apiVersion: monitoring.my.domain/v1
+kind: Connectivity
+metadata:
+  name: sample-connectivity
+spec:
+  endpoints:
+    - url: "google.com"
+      protocol: ping
+    - url: "connectivity-listener.default.svc.cluster.local:8080"
+      protocol: http
+    - url: "connectivity-listener.default.svc.cluster.local:50051"
+      protocol: grpc
